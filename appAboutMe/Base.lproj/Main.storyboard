@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="appAboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,78 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WLO-hk-fyv">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdQ-K4-S5S">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
+                                        <state key="normal" title="Music"/>
+                                        <connections>
+                                            <action selector="clickButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpw-Oh-rnk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx7-sM-rb5">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="100"/>
+                                        <state key="normal" title="Programming"/>
+                                        <connections>
+                                            <action selector="clickButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QgG-F3-Ka7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIj-HQ-PC8">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="100"/>
+                                        <state key="normal" title="Other Hobbies"/>
+                                        <connections>
+                                            <action selector="clickButton3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lxd-hs-ZO3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Tkx-Nb-Wvj"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4LA-6q-X5b">
+                                <rect key="frame" x="0.0" y="20" width="375" height="547"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cello" translatesAutoresizingMaskIntoConstraints="NO" id="TWM-ux-kRf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="grandPiano" translatesAutoresizingMaskIntoConstraints="NO" id="dZJ-Az-26s">
+                                        <rect key="frame" x="0.0" y="189" width="375" height="169"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These are the instrments that I play: the Cello and the Piano." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lab-hB-sRS">
+                                        <rect key="frame" x="0.0" y="378" width="375" height="169"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WLO-hk-fyv" firstAttribute="top" secondItem="4LA-6q-X5b" secondAttribute="bottom" id="IRE-j5-R1V"/>
+                            <constraint firstItem="4LA-6q-X5b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XiF-jb-4eE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WLO-hk-fyv" secondAttribute="bottom" id="fCE-0K-UtE"/>
+                            <constraint firstAttribute="trailing" secondItem="4LA-6q-X5b" secondAttribute="trailing" id="faM-NJ-fgM"/>
+                            <constraint firstAttribute="trailing" secondItem="WLO-hk-fyv" secondAttribute="trailing" id="fmg-1W-sgT"/>
+                            <constraint firstItem="WLO-hk-fyv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oU7-gh-9m2"/>
+                            <constraint firstItem="4LA-6q-X5b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="p3F-fu-cmm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="stackImage1" destination="TWM-ux-kRf" id="M9u-xI-pKL"/>
+                        <outlet property="stackImage2" destination="dZJ-Az-26s" id="2qX-uQ-v9N"/>
+                        <outlet property="stackText1" destination="Lab-hB-sRS" id="DTp-s6-UJZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-214" y="117"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cello" width="800" height="800"/>
+        <image name="grandPiano" width="1114" height="1200"/>
+    </resources>
 </document>
